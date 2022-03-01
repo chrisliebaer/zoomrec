@@ -8,7 +8,6 @@ ENV HOME=/home/zoomrec \
     VNC_RESOLUTION=1280x720 \
     VNC_COL_DEPTH=24 \
     VNC_PW=zoomrec \
-    VNC_PORT=5900 \
     DISPLAY=:1
 
 # Add user

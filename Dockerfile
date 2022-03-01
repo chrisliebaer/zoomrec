@@ -126,6 +126,7 @@ ADD res/img ${HOME}/img
 USER 0
 RUN chmod a+x ${START_DIR}/entrypoint.sh && \
     chmod -R a+rw ${START_DIR} && \
+    mkdir -p ${HOME}/recordings ${HOME}/audio && \
     chown -R zoomrec:zoomrec ${HOME} && \
     find ${HOME}/ -name '*.sh' -exec chmod -v a+x {} + && \
     find ${HOME}/ -name '*.desktop' -exec chmod -v a+x {} +

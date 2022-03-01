@@ -33,7 +33,7 @@ pyautogui.FAILSAFE = False
 
 # Get vars
 BASE_PATH = os.getenv('HOME')
-CSV_PATH = os.path.join(BASE_PATH, "meetings.csv")
+CSV_PATH = os.path.join(BASE_PATH, "meetings/meetings.csv")
 IMG_PATH = os.path.join(BASE_PATH, "img")
 REC_PATH = os.path.join(BASE_PATH, "recordings")
 AUDIO_PATH = os.path.join(BASE_PATH, "audio")
@@ -432,7 +432,7 @@ def join(meet_id, meet_pw, duration, description):
             REC_PATH, time.strftime(TIME_FORMAT)) + "-" + description + "-JOIN.mkv"
 
         command = "ffmpeg -nostats -loglevel quiet -f pulse -ac 2 -i 1 -f x11grab -r 15 -s " + resolution + " -i " + \
-                  disp + " -acodec libopus -b:a 64k -vcodec libx264 -preset ultrafast -crf 32 -tune stillimage -threads 0 -async 1 -vsync 1 " + filename
+                  disp + " -acodec libopus -b:a 64k -vcodec libx264 -preset ultrafast -crf 28 -tune stillimage -threads 0 -async 1 -vsync 1 " + filename
 
         ffmpeg_debug = subprocess.Popen(
             command, stdout=subprocess.PIPE, shell=True, preexec_fn=os.setsid)

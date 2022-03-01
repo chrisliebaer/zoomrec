@@ -5,10 +5,10 @@ ENV HOME=/home/zoomrec \
     TERM=xfce4-terminal \
     START_DIR=/start \
     DEBIAN_FRONTEND=noninteractive \
-    VNC_RESOLUTION=1024x576 \
+    VNC_RESOLUTION=1280x720 \
     VNC_COL_DEPTH=24 \
     VNC_PW=zoomrec \
-    VNC_PORT=5901 \
+    VNC_PORT=5900 \
     DISPLAY=:1
 
 # Add user
